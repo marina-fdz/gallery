@@ -1,0 +1,16 @@
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 20px 20px 10px;
+    &__ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        a {
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

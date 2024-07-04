@@ -1,5 +1,7 @@
+import '../styles/Gallery.scss';
 
 import Card from "./Card"
+
 import PropTypes from 'prop-types';
 
 
@@ -8,7 +10,7 @@ function Gallery({data, searchValidation}) {
   
 
   return (
-    <section>
+    <section className='gallery'>
       <h3>{searchValidation}</h3>
       {data.map((product)=>{
         return <Card key={product.idProduct} product={product}/>

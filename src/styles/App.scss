@@ -15,6 +15,28 @@ html{
   font-size: 62.5%;
 }
 
+:root {
+
+  /* COLORS */
+
+  --color-background: lightgrey;
+  --color-main: blue;
+ 
+
+  /* FONTS */
+
+  --font-title: 'Averia Serif Libre', serif;
+  --font-text: "Reddit Sans", sans-serif;
+
+  /* applied */
+
+  font-family: var(--font-text);
+  font-size: 16px;
+  color: var(--color-main);
+  background-color: var(--color-background);
+
+}
+
 .hidden{
   display: none;
 }

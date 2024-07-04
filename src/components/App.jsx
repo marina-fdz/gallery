@@ -1,12 +1,14 @@
-// Fichero src/components/App.jsx
-import { Route, Routes } from 'react-router-dom';
 import '../styles/App.scss';
+
+import { Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
+
 import Footer from './Footer';
 import Header from './Header';
 import Gallery from './Gallery';
 import Contact from './Contact';
 import NotFound from './NotFound';
-import { useState } from 'react';
+
 import data from '../services/data.json';
 
 function App() {

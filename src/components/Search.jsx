@@ -21,8 +21,8 @@ function Search({ search, setSearch, types}) {
 
   return (
     <form onSubmit={handleSubmit}>
-        <label htmlFor="search-name" className="input">search</label>
-        <input type="text" name="search-name" id="search-name" onChange={handleChange} value={search.name} placeholder="Product name"/>
+        {/* <label htmlFor="search-name" className="input">search</label> */}
+        <input type="text" name="search-name" id="search-name" onChange={handleChange} value={search.name} placeholder="Search product"/>
 
         <select name="types" id="types" onChange={handleSelect} value={search.type}>
             <option value="">All</option>
