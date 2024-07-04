@@ -14,14 +14,14 @@ function Carousel({data}) {
 
   return (
     <div className="carousel">
-        <span className="carousel__icon-left" onClick={prevSlide}>+</span>
+        <span className="carousel__icon-left" onClick={prevSlide}>{data.length > 1 ? '+' : ''}</span>
         {data.map((item, index) =>{
             return <img className={slide === index ? "carousel__img" : "hidden"} src={item} alt="" key={index}/>
         })}
-        <span className="carousel__icon-right" onClick={nextSlide}>+</span>
+        <span className="carousel__icon-right" onClick={nextSlide}>{data.length > 1 ? '+' : ''}</span>
         <div className="carousel__dots">
             {data.map((_, index) =>{
-                return <span className={slide === index ? "" : "indicator-inactive"} key={index} onClick={() => setSlide(index)}>.</span>
+                return <span className={slide === index ? "" : "indicator-inactive"} key={index} onClick={() => setSlide(index)}>{data.length > 1 ? '.' : ''}</span>
             })}
         </div>
     </div>

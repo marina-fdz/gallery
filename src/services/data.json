@@ -3,7 +3,7 @@
     "name": "Product 1",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quae non placeat iusto hic quasi nemo numquam aut, magnam voluptate incidunt voluptatum voluptatibus reprehenderit obcaecati tempore possimus, blanditiis suscipit iste!",
     "img": "product1.jpg",
-    "photos": ["product1.jpg", "https://picsum.photos/800/700", "https://picsum.photos/800/700"],
+    "photos": ["product1.jpg"],
     "type": "T-shirt",
     "stock": false
 },
