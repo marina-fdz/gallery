@@ -1,0 +1,44 @@
+.carousel{
+    &__img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        // filter: invert(1);
+        // filter: hue-rotate(320deg);
+    }
+    &__icon-left{
+        position: absolute;
+        left: 30px;
+        color: var(--color-white);
+        font-size: 3rem;
+        z-index: 100;
+        &:hover{
+            cursor: pointer;
+        }
+        
+    }
+    &__icon-right{
+        position: absolute;
+        color: var(--color-white);
+        font-size: 3rem;
+        right: 30px;
+        z-index: 100;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &__dots{
+        z-index: 200;
+        font-size: 5rem;
+        position: absolute;
+        color: var(--color-white);
+        bottom: 5px;
+        &:hover{
+            cursor: pointer;
+        }
+        .indicator-inactive{
+            color: grey;
+        }
+    }
+}
