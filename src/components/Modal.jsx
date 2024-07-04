@@ -8,7 +8,7 @@ function Modal({product, toggleModal}) {
     
     <div className='modal'>
     <article className='modal__card'>
-        <button onClick={toggleModal} className='modal__card-x'>X</button>
+        <button onClick={toggleModal} className='modal__card-x'>+</button>
         <Carousel data={product.photos}/>
         <h3 className='modal__card-title'>{product.name}</h3>
         <p>{product.desc}</p>
