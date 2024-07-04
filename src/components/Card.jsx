@@ -1,3 +1,4 @@
+import '../styles/Card.scss';
 
 import PropTypes from 'prop-types';
 import Modal from './Modal';
@@ -17,9 +18,9 @@ const [modal, setModal] = useState(false);
 
   return (
     <>
-    <article onClick={toggleModal}>
-        <img src={product.img} alt={"Image of " + product.name} />
-        <h3>{product.name}</h3>
+    <article className="card" onClick={toggleModal}>
+        <img className="card__img" src={product.img} alt={"Image of " + product.name} />
+        <h3 className="card__title">{product.name}</h3>
     </article>
     {modal && (<Modal product={product} toggleModal={toggleModal}/>)}
     </>

@@ -1,17 +1,23 @@
+import '../styles/Modal.scss';
+
 import Carousel from "./Carousel"
 import PropTypes from 'prop-types';
 
 function Modal({product, toggleModal}) {
   return (
-    <article>
-        <button onClick={toggleModal}>X</button>
+    
+    <div className='modal'>
+    <article className='modal__card'>
+        <button onClick={toggleModal} className='modal__card-x'>X</button>
         <Carousel data={product.photos}/>
-        <h3>{product.name}</h3>
+        <h3 className='modal__card-title'>{product.name}</h3>
         <p>{product.desc}</p>
         {product.stock && (
-            <a href="">Buy</a>
+            <a href="" className='modal__card-buy'>Buy</a>
         )}
     </article>
+    </div>
+   
   )
 }
 

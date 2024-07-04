@@ -13,7 +13,7 @@ function Carousel({data}) {
     
 
   return (
-    <>
+    <div className="carousel">
         <span className="carousel__icon-left" onClick={prevSlide}>+</span>
         {data.map((item, index) =>{
             return <img className={slide === index ? "carousel__img" : "hidden"} src={item} alt="" key={index}/>
@@ -24,7 +24,7 @@ function Carousel({data}) {
                 return <span className={slide === index ? "" : "indicator-inactive"} key={index} onClick={() => setSlide(index)}>.</span>
             })}
         </div>
-    </>
+    </div>
   )
 }
 
