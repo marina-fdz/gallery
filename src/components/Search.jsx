@@ -1,4 +1,4 @@
-
+import '../styles/Search.scss';
 
 function Search({ search, setSearch, types}) {
     const handleSubmit = (ev) => {
@@ -20,18 +20,18 @@ function Search({ search, setSearch, types}) {
 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="hidden" onSubmit={handleSubmit}>
         {/* <label htmlFor="search-name" className="input">search</label> */}
-        <input type="text" name="search-name" id="search-name" onChange={handleChange} value={search.name} placeholder="Search product"/>
+        <input className="search__name" type="text" name="search-name" id="search-name" onChange={handleChange} value={search.name} placeholder="Search product"/>
 
-        <select name="types" id="types" onChange={handleSelect} value={search.type}>
-            <option value="">All</option>
+        <select className="search__select" name="types" id="types" onChange={handleSelect} value={search.type}>
+            <option className="search__select-option" value="">All</option>
             {types.map((type, i)=>{
-                return <option key={i} value={type}>{type}</option>
+                return <option key={i} className="search__select-option"value={type}>{type}</option>
             })}
         </select>
 
-        <input type="reset" value="x" onClick={handleReset} />
+        <input className="search__x" type="reset" value="x" onClick={handleReset} />
     </form>
   )
 }
