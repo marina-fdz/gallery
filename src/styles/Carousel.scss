@@ -4,24 +4,54 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    // height: 85%;
-    width: 100%;
     max-height: 82%;
-    aspect-ratio: 16 / 9;
+    border: 1px solid var(--color-main);
+    // background: repeating-linear-gradient(
+    //     to right,
+    //     var(--color-main),
+    //     var(--color-main) 1px,
+    //     transparent 1px,
+    //     transparent 40px
+    //     );
+    background: 
+  repeating-linear-gradient(
+    to right, transparent, 
+    transparent 50px, 
+    var(--color-main) 50px, 
+    var(--color-main) 51px
+  ),
+  repeating-linear-gradient(
+    to bottom, transparent,  
+    transparent 50px, 
+    var(--color-main) 50px, 
+    var(--color-main) 51px
+  );
+    
+   
     &__img{
-        // border: 1px solid var(--color-main);
-        background-color: white;
         width: 100%;
-        height: 100%;
+        max-height: 100%;
         object-fit: cover;
-        // filter: invert(1);
-        // filter: hue-rotate(320deg);
+        &:first-of-type{
+            width: initial;
+            object-fit: contain;
+            max-width: 100%;
+            border-left: 1px solid var(--color-main);
+            border-right: 1px solid var(--color-main);
+            
+        }
+        
     }
+   
+
     &__icon-left{
         position: absolute;
         top: 45%;
-        left: 20px;
-        padding: 0 20px;
+        left: 0px;
+        padding: 0 12px;
+        background-color: var(--color-background);
+        transform: translateX(-50%);
+        border-radius: 100px;
         color: var(--color-main);
         font-size: 3rem;
         z-index: 100;
@@ -39,8 +69,11 @@
         color: var(--color-main);
         font-size: 3rem;
         top: 45%;
-        right: 20px;
-        padding: 0 20px;
+        right: 0px;
+        padding: 0 12px;
+        transform: translateX(50%);
+        background-color: var(--color-background);
+        border-radius: 100px;
         z-index: 100;
         &:hover{
             cursor: pointer;
@@ -56,7 +89,8 @@
         font-size: 5rem;
         position: absolute;
         color: var(--color-main);
-        bottom: 5px;
+        bottom: 0px;
+        transform: translateY(50%);
         &:hover{
             cursor: pointer;
         }
