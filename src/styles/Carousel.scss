@@ -14,13 +14,13 @@
     //     transparent 40px
     //     );
     background: 
-  repeating-linear-gradient(
+    repeating-linear-gradient(
     to right, transparent, 
     transparent 50px, 
     var(--color-main) 50px, 
     var(--color-main) 51px
   ),
-  repeating-linear-gradient(
+    repeating-linear-gradient(
     to bottom, transparent,  
     transparent 50px, 
     var(--color-main) 50px, 

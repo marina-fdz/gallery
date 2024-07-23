@@ -1,13 +1,13 @@
 .search{
     display: flex;
-    gap: 5px;
+    gap: 10px;
     &__name{
         background-color: var(--color-background);
-        border: 1px solid var(--color-main);
-        padding: 5px 20px;
+        border: none;
+        border-bottom: 1px solid var(--color-main);
+        padding: 5px 0px;
         font-size: 1.6rem;
         color: var(--color-main);
-        border-radius: 100px;
         font-family: var(--font-text);
         &::placeholder{
             color: var(--color-main);
@@ -18,11 +18,11 @@
     }
     &__select{
         background-color: var(--color-background);
-        border: 1px solid var(--color-main);
-        padding: 5px 20px;
+        border: none;
+        border-bottom: 1px solid var(--color-main);
+        padding: 5px 0px;
         font-size: 1.6rem;
         color: var(--color-main);
-        border-radius: 100px;
         font-family: var(--font-text);
         &::after{
             color: var(--color-main);
@@ -37,5 +37,19 @@
         color: var(--color-main);
         border-radius: 100px;
         font-family: var(--font-text);
+        @media screen and (width > 768px){
+        &:hover{
+            cursor: pointer;
+            color: var(--color-background);
+            background-color: var(--color-main);
+        }
+        }
+        
     }
+
+    
+        
+        
+        
+   
 }

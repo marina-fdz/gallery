@@ -12,9 +12,11 @@ function Gallery({data, searchValidation}) {
   return (
     <section className='gallery'>
       <h3>{searchValidation}</h3>
-      {data.map((product)=>{
-        return <Card key={product.idProduct} product={product}/>
-      })}
+      <div className="gallery__list">
+        {data.map((product)=>{
+          return <Card key={product.idProduct} product={product}/>
+        })}
+      </div>
     </section>
   )
 }

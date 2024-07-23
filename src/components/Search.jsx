@@ -22,7 +22,7 @@ function Search({ search, setSearch, types}) {
   return (
     <form className="hidden" onSubmit={handleSubmit}>
         {/* <label htmlFor="search-name" className="input">search</label> */}
-        <input className="search__name" type="text" name="search-name" id="search-name" onChange={handleChange} value={search.name} placeholder="Search product"/>
+        <input className="search__name" type="text" name="search-name" id="search-name" onChange={handleChange} value={search.name} placeholder="Product name"/>
 
         <select className="search__select" name="types" id="types" onChange={handleSelect} value={search.type}>
             <option className="search__select-option" value="">All</option>
@@ -31,7 +31,9 @@ function Search({ search, setSearch, types}) {
             })}
         </select>
 
-        <input className="search__x" type="reset" value="x" onClick={handleReset} />
+        <input className="search__x" type="submit" value="Search" onClick={handleReset} />
+
+        <input className="search__x" type="reset" value="Reset" onClick={handleReset} />
     </form>
   )
 }
